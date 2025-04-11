@@ -11,4 +11,3 @@ class shoppingCart:
 
     def get_total(self):
         return sum(self.items.values())
-
