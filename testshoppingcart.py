@@ -1,6 +1,7 @@
 import unittest
 from shoppingcart import shoppingcart
 
+
 class testshoppingcart(unittest.TestCase):
     def test_add_item(self):
         cart = shoppingcart()
@@ -13,5 +14,6 @@ class testshoppingcart(unittest.TestCase):
         cart.remove_item("apple")
         self.assertEqual(cart.get_total(), 0.0)
 
-if _name_ == '_main_':
+
+if __name__ == '__main__':
     unittest.main()
