@@ -3,6 +3,8 @@ from app import addTask, getTasks
 
 # Define a fixture to reset the tasks list before each test
 @pytest.fixture(autouse=True)
+
+
 def reset_tasks():
     from app import tasks  # Import the tasks list
     tasks.clear()
