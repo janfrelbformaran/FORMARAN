@@ -1,9 +1,15 @@
-import todo
+import pytest
+from app import addTask, getTasks
 
 
-result = todo.addTask("Learn Python")
-print("Test addTask:", "Pass" if "Learn Python" in todo.tasks else "Fail")
+def test_add_task():
+    result = addTask("Test Task")
+    assert result == "Task added."
+    assert "Test Task" in getTasks()
 
 
-allTasks = todo.getTasks()
-print("Test getTasks:", "Pass" if allTasks == ["Learn Python"] else "Fail")
+def test_get_tasks():
+    addTask("Another Task")
+    tasks = getTasks()
+    assert len(tasks) == 1
+    assert tasks[0] == "Another Task"
