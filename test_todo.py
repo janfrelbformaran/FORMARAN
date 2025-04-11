@@ -21,4 +21,3 @@ def test_get_tasks():
     tasks = getTasks()
     assert len(tasks) == 1
     assert tasks[0] == "Another Task"
-    
