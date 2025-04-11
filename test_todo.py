@@ -2,7 +2,6 @@ import pytest
 from app import addTask, getTasks
 
 
-
 @pytest.fixture(autouse=True)
 def reset_tasks():
     from app import tasks
