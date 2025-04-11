@@ -1,4 +1,4 @@
-from todo import addTask, getTasks
+from app import addTask, getTasks
 
 
 def test_add_task():
